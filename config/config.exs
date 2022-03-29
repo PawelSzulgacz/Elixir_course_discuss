@@ -8,7 +8,6 @@
 import Config
 import_config "../test/discuss.secret.exs"
 
-
 config :discuss,
   ecto_repos: [Discuss.Repo]
 
@@ -59,5 +58,5 @@ import_config "#{config_env()}.exs"
       ]
 
   config :ueberauth, Ueberauth.Strategy.Github.OAuth,
-    client_id: Application.get_env(:discuss, :cli_id),
-    client_secret: Application.get_env(:discuss, :sec_key)
+  client_id: Application.get_env(:discuss, :cli_id),
+  client_secret: Application.get_env(:discuss, :sec_key)
